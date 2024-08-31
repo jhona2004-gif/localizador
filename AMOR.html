@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El amor de mi vida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+        .header {
+            background-color: #d9534f; /* Color rojo */
+            color: white;
+            padding: 20px 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .comment {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+        .heart {
+            font-size: 100px;
+            color: #ff6b6b;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .heart:hover {
+            transform: scale(1.1);
+        }
+        .message {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+            white-space: pre-line; /* Mantiene los saltos de línea */
+        }
+        .letter {
+            font-size: 24px;
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #d9534f;
+            border-radius: 10px;
+            background-color: #fff;
+            color: #d9534f;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .button {
+            font-size: 24px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #e04b4b;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        El amor de mi vida
+    </div>
+
+    <div class="comment">
+        Presiona cada corazoncito mi vida ❤️
+    </div>
+
+    <div class="gallery" id="gallery">
+        <div class="heart" onclick="showMessage(`En tus ojos veo el reflejo de todos mis sueños cumplidos 🌟,
+
+        Tu risa es el canto que alegra mis mañanas 🎶.
+
+        Cada momento contigo es un regalo que atesoro sin fin 🎁,
+
+        Eres el sol que ilumina mis días ☀️
+
+        y la luna que guía mis noches 🌙.`)">❤️</div>
+        
+        <div class="heart" onclick="showMessage(`Querida mía 💕,
+
+        Desde que entraste en mi vida, todo ha cambiado para mejor.
+
+        Tu amor es mi anhelo constante, la razón por la que sonrío cada día 😊.
+
+        Gracias por llenar mi vida con tanta felicidad y por ser mi mayor apoyo 💖.
+
+        Te amo más de lo que las palabras pueden expresar, y siempre lo haré 💌.`)">❤️</div>
+        
+        <div class="heart" onclick="showMessage(`Contigo, cada día es un nuevo capítulo lleno de emoción y alegría 📖✨.
+
+        Tu amor transforma los momentos ordinarios en recuerdos extraordinarios 🌈.
+
+        Eres la razón por la que despierto con una sonrisa y duermo con paz 😌💤.
+
+        Mi corazón es tuyo 💘,
+
+        y en él guardo cada instante mágico que compartimos 🌟.`)">❤️</div>
+        
+        <div class="heart" onclick="showMessage(`Tu amor me ha mostrado un mundo lleno de belleza y esperanza 🌍💫.
+
+        Eres mi refugio en los días difíciles y mi alegría en los momentos felices ☔🌞.
+
+        Cada instante a tu lado es un tesoro que guardo con cariño infinito 💎.
+
+        Mi vida tiene un sentido completo porque te tengo a ti en ella ❤️.`)">❤️</div>
+        
+        <div class="heart" onclick="showMessage(`Eres la chispa que enciende mi corazón 🔥
+
+        y el abrazo que necesito cada día 🤗.
+
+        Tu ternura y tu sonrisa son los regalos más preciosos que he recibido 🎁💝.
+
+        Admiro cada parte de ti y agradezco cada momento que compartimos 🙏.
+
+        En cada latido de mi corazón, encontrarás un te amo sincero y eterno 💓.`)">❤️</div>
+        
+        <div class="heart" onclick="showMessage(`Prometo estar a tu lado en cada paso del camino 🚶‍♂️🚶‍♀️,
+
+        apoyándote siempre 💪.
+
+        Tu amor es el anhelo de mi vida, y lo valoro más de lo que puedes imaginar 🌟.
+
+        Seré tu refugio, tu amigo y tu amante, hoy y siempre 💏💖.
+
+        Cada día contigo es una bendición 🙌,
+
+        y siempre te amaré con todo mi ser ❤️.`)">❤️</div>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <div class="letter">
+        Te amo mi cielo
+    </div>
+
+    <button class="button" onclick="showLongMessage()">Presióname</button>
+
+    <script>
+        function showMessage(message) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = message;
+        }
+
+        function showLongMessage() {
+            // Ocultar los corazones y el botón
+            document.getElementById('gallery').style.display = 'none';
+            document.querySelector('.comment').style.display = 'none';
+            document.querySelector('.button').style.display = 'none';
+
+            // Mostrar el mensaje largo
+            const longMessage = `
+                Mi amor 🌹,
+
+                Desde el momento en que te conocí, supe que mi vida había cambiado para siempre. Eres la luz que ilumina mis días y la razón por la que me levanto cada mañana con una sonrisa en el rostro 🌞. No hay palabras suficientes para expresar cuánto significas para mí, pero intentaré hacerlo con todo mi corazón ❤️.
+
+                Tu presencia es un regalo que atesoro cada día 🎁. Cada vez que te miro a los ojos, veo un futuro lleno de amor, felicidad y sueños cumplidos 🌟. Eres mi compañera, mi mejor amiga y el amor de mi vida, y nada ni nadie podrá separarnos 👫.
+
+                Prometo estar a tu lado en cada paso que demos juntos, apoyándote en cada desafío y celebrando cada victoria 🎉. Mi amor por ti es eterno y crece con cada día que pasa 💘. Quiero pasar el resto de mi vida a tu lado, creando recuerdos hermosos y construyendo una vida llena de amor y felicidad 🏡💑.
+
+                Eres mi todo, mi vida, mi amor infinito. Gracias por existir, por amarme y por hacerme el hombre más feliz del mundo 🌍. Te amo con todo mi ser, hoy, mañana y siempre 💞.
+
+                Con todo mi amor,
+                Tuyo por siempre 💌.
+            `;
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = longMessage;
+            messageDiv.style.display = 'block';
+
+            // Mostrar el botón de regresar
+            const backButton = document.createElement('button');
+            backButton.textContent = 'Regresar ❤️';
+            backButton.className = 'button';
+            backButton.style.marginTop = '20px';
+            backButton.onclick = function() {
+                location.reload();
+            };
+            document.body.appendChild(backButton);
+        }
+    </script>
+</body>
+</html>
+
